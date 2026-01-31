@@ -1,113 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
-    <title>Caluculator
-    </title>
+    
+    <title>Profile</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sec1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.cs" >
 </head>
 <body>
-    <style>
-    .cal{
-    width: 400px;
-    background-color: hsl(0, 0%, 15%);
-    border-radius: 10px;
-    overflow: hidden;
-    
-}
-.btns{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    padding: 10px;
-    gap: 10px;
-   
-    
-    
+    <nav class="navbar">
+        <div class="na">Jitendar Reddy N R</div>
+        <div class="menu">
+        <button class="bt" onclick="on()">About</button>
+        <button class="bt" onclick="ons()">Skills</button>
+        <button class="bt">Projects</button>
+        <a href="cer.png.jpeg" download><button class="bt">Certificates</button></a>
+        </div>
+    </nav>
+    <nav class="navbar-menu">
+        <div class="na">Jitendar Reddy N R</div>
+        <div class="menu2"><i class="fa-solid fa-bars"></i></div>
+        <ul class="menu">
+            <li><button >About</button></li>
+            <li><button >Skills</button></li>
+            <li><button>Projects</button></li>
+            <li><button>Certificates</button></li>
+        </ul>
+    </nav>
+    <section class="sec1">
+        <div class="img"><img src="img.png.jpeg" > </div>
+        <div class="sec1-2">
+            <span class="sp">Hello, i am</span>
+            <h1>Jitendar Reddy</h1>
+            <span class="sp1">Python Developer</span>
+            <p class="p1">As a dedicated Python Developer, I specialize in building robust backend systems and scalable web applications using frameworks like Django and FastAPI. I possess a strong foundation in data structures, SQL databases, and RESTful API integration, allowing me to transform complex logic into efficient code. My approach combines technical precision with a focus on writing clean, maintainable documentation that supports seamless team collaboration. I am committed to continuous learning and leveraging Python’s powerful ecosystem to solve real-world problems and optimize digital performance.</p>
+            <div class="dow">
+            <button class="btn1">Download cv</button>            
+            <button class="btn2" onclick="window.location.href='tel:+91 6302564838'">Contact info</button> 
+            </div>           
 
-}
-button{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    gap: 20px;
-     background-color: hsl(0, 0%, 30%);
-    color: white;
-    font-size: 30px;
-    font-weight: 40px;
-    cursor: pointer;
+        </div>
+    </section>
+    <div id="about">
+        <p>Hello! I am Jitendar Reddy. I am a student and a beginner Python Developer.
+    I am interested in web development and learning new technologies.
+    I enjoy coding, solving problems, and building small projects.</p>
 
-}
-input{
-    width: 100%;
-    background-color: hsl(0, 0%, 20%);
-    height: 80px;
-    border: none;
-    color: white;
-    font-size: 50px;
-    font-weight: 40px;
-
-}
-body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.c{
-    background-color: orange;
-}.c:hover{
-    background-color: hsl(35, 100%, 65%);
-    cursor: pointer;
-}
-.c:active{
-    background-color: hsl(35, 100%, 65%);
-
-}
-button:hover{
-     background-color: hsl(0, 0%, 40%);
-}
-button:active{
-    background-color: hsl(0, 0%, 50%) ;
-}
-</style>
-    <div class="cal">
-    <input type="text" id="display" readonly>
-    <div class="btns">
-        <button class="c"   onclick="todisplay('+')">+</button>
-        <button onclick="todisplay('7')">7</button>
-        <button onclick="todisplay('8')">8</button>
-        <button onclick="todisplay('9')">9</button>
-        <button class="c"   onclick="todisplay('-')">-</button>
-        <button onclick="todisplay('4')">4</button>
-        <button onclick="todisplay('5')">5</button>
-        <button onclick="todisplay('6')">6</button>
-        <button  class="c"  onclick="todisplay('*')">*</button>
-        <button onclick="todisplay('1')">1</button>
-        <button onclick="todisplay('2')">2</button>
-        <button onclick="todisplay('3')">3</button>
-        <button   class="c"  onclick="todisplay('/')">/</button>
-        <button onclick="todisplay('0')">0</button>
-        <button  onclick="todisplay('.')">.</button>
-        <button onclick="caluculate()">=</button>
-        <button  class="c" onclick="clear1()">c</button>
     </div>
+    <div id="skills">
+        <p> Programming:Python<br>Fronted:HTML,CSS,Javascript</p>
     </div>
     <script>
-        const ele=document.getElementById('display');
-        function todisplay(input){
-            ele.value+=input;
-        }
-        function caluculate(){
-            try{
-                ele.value=eval(ele.value)
-            }catch{
-                ele.value="Error";
+        function on(){
+            let about=document.getElementById("about");
+            if(about.style.display ==="none" || about.style.display ===""){
+                about.style.display="block";
+            }else{
+                about.style.display="none";
             }
         }
-        function clear1(){
-            ele.value=""
+
+    </script>
+    <script>
+        function ons(){
+            let skills=document.getElementById("skills");
+            if(skills.style.display ==="none" || skills.style.display ===""){
+                skills.style.display="block";
+            }else{
+                skills.style.display="none";
+            }
         }
+
     </script>
     
 </body>
