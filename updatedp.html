@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sec1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.cs" >
+</head>
+<body>
+    <nav class="navbar">
+        <div class="na">Jitendar Reddy N R</div>
+        <div class="menu">
+        <button class="bt" onclick="on()">About</button>
+        <button class="bt" onclick="ons()">Skills</button>
+        <button class="bt">Projects</button>
+        <a href="cer.png.jpeg" download><button class="bt">Certificates</button></a>
+        </div>
+    </nav>
+    <nav class="navbar-menu">
+        <div class="na">Jitendar Reddy N R</div>
+        <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+        <ul class="menu">
+            <li><button  onclick="on()">About</button></li>
+            <li><button onclick="ons()">Skills</button></li>
+            <li><button>Projects</button></li>
+            <li><a href="cer.png.jpeg" download><button >Certificates</button></a></li>
+        </ul>
+    </nav>
+    <section class="sec1">
+        <div class="img"><img src="img.png.jpeg" > </div>
+        <div class="sec1-2">
+            <span class="sp">Hello, i am</span>
+            <h1>Jitendar Reddy</h1>
+            <span class="sp1">Python Developer</span>
+            <p class="p1">As a dedicated Python Developer, I specialize in building robust backend systems and scalable web applications using frameworks like Django and FastAPI. I possess a strong foundation in data structures, SQL databases, and RESTful API integration, allowing me to transform complex logic into efficient code. My approach combines technical precision with a focus on writing clean, maintainable documentation that supports seamless team collaboration. I am committed to continuous learning and leveraging Python’s powerful ecosystem to solve real-world problems and optimize digital performance.</p>
+            <div class="dow">
+            <button class="btn1">Download cv</button>            
+            <button class="btn2" onclick="window.location.href='tel:+91 6302564838'">Contact info</button> 
+            </div>           
+
+        </div>
+    </section>
+    <div id="about">
+        <p>Hello! I am Jitendar Reddy. I am a student and a beginner Python Developer.
+    I am interested in web development and learning new technologies.
+    I enjoy coding, solving problems, and building small projects.</p>
+
+    </div>
+    <div id="skills">
+        <p> Programming:Python<br>Fronted:HTML,CSS,Javascript</p>
+    </div>
+    <script>
+        function on(){
+            let about=document.getElementById("about");
+            if(about.style.display ==="none" || about.style.display ===""){
+                about.style.display="block";
+            }else{
+                about.style.display="none";
+            }
+        }
+
+    </script>
+    <script>
+        function ons(){
+            let skills=document.getElementById("skills");
+            if(skills.style.display ==="none" || skills.style.display ===""){
+                skills.style.display="block";
+            }else{
+                skills.style.display="none";
+            }
+        }
+
+    </script>
+    <script> 
+        const hamburger=document.querySelector('.hamburger');
+        const menu_bar=document.querySelector(".navbar-menu .menu");
+        hamburger.addEventListener("click",()=>{
+            menu_bar.classList.toggle("show")
+
+        })
+    </script>
+    
+</body>
+</html>
