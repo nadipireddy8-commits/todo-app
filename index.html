@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.cs" >
 </head>
 <body>
-    <style>
-        #projects{
-            display:none;
-        }
-    </style>
     <nav class="navbar">
         <div class="na">Jitendar Reddy N R</div>
         <div class="menu">
@@ -22,6 +17,8 @@
         <button class="bt" onclick="pro()">Projects</button>
         <a href="cer.png.jpeg" download><button class="bt">Certificates</button></a>
         </div>
+        <button class="bt" onclick="con()">Contact</button>
+
     </nav>
     <nav class="navbar-menu">
         <div class="na">Jitendar Reddy N R</div>
@@ -31,6 +28,7 @@
             <li><button onclick="ons()">Skills</button></li>
             <li><button onclick="pro()">Projects</button></li>
             <li><a href="cer.png.jpeg" download><button >Certificates</button></a></li>
+            <li><button class="bt" onclick="con()">Contact</button></li>
         </ul>
     </nav>
     <section class="sec1">
@@ -103,7 +101,61 @@
 
         })
     </script>
+
+
+
+    <div id="contact" style="display: none;">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+        <input type="text" id="name" placeholder="Enter name" required><br><br>
+        <input type="email" id="email" placeholder="Enter email" required><br><br>
+        <textarea id="message" placeholder="Enter message"></textarea><br><br>
+        <button type="submit">Send</button>
+        </form>
+
+
+    </div>
+
+    <script>
+        function con(){
+            let section=document.getElementById('contact');
+            if(section.style.display==="none"){
+                section.style.display="block";
+
+            }else{
+                section.style.display="none";
+            }
+        }
+        
+        document.getElementById("contactForm").addEventListener("submit", function(e){
+
+
+            e.preventDefault();
+
+
+            let data = {
+
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            };
+
+            fetch("http://localhost:3000/contact", {
+            
+
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(res => res.text())
+            .then(data => alert(data));
+
+        });
+    </script>
+    
+
     
 </body>
-
 </html>
