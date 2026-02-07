@@ -9,6 +9,249 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.cs" >
 </head>
 <body>
+    <style>
+        .menu{
+        
+            font-style: italic;
+            font-weight: 60px;
+            font-size: 20px;
+            font-weight: bold;
+            list-style: none;
+            display: flex;
+            padding: 10px;
+            width: 60%;
+            justify-content: space-around;
+        }
+        .na{
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            padding: 20px;
+            width: 40%;
+            color: orange;
+            margin-bottom: 10px;
+
+            
+        }
+        nav{
+            display: flex;
+            align-items: center;
+        }
+
+
+        .img{
+            border: 50%;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .navbar-menu{
+            display: none;
+
+        }
+        @media(max-width: 1024px){
+            .navbar{
+                display: none;
+            }
+            .navbar-menu{
+                display: flex;
+            }
+            .hamburger{
+                background-color: white;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+                position: fixed;
+                right: 30px;
+                top: 20px;
+            }
+            
+            .hamburger i{
+                font-size: 35px;
+                padding: 4px;
+                
+            }
+            .navbar-menu .na{
+                margin-top: 20px;
+            }
+            .navbar-menu .menu{
+                display: flex;
+                flex-direction: column;
+                background-color: orange;
+                position: fixed;
+                margin-right: -700px;
+                right: 0;
+                top: 70px;
+                padding: 10px;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+            .navbar-menu .menu.show{
+                margin-right: 0;
+
+            }
+            .navbar-menu .menu  li{
+                background-color: white;
+                gap: 20px;
+                border-radius: 5px;
+                font-weight: 600;
+            }
+            
+        }
+        .bt{
+            border-radius: 400px;
+            padding: 10px;
+            border:solid black;
+        }
+        .bt:hover{
+            background-color: orange;
+        }
+        #about{
+            display: none;
+            width: 300px;
+            padding: 15px;
+            margin-top: 10px;
+            background: #f2f2f2;
+            border: 2px solid #333;
+            border-radius: 10px;
+            text-align: left;
+
+            float: none;
+            shape-outside: none;
+            position:static;
+        }
+        #skills{
+            display: none;
+            width: 300px;
+            padding: 15px;
+            margin-top: 10px;
+            background: #f2f2f2;
+            border: 2px solid #333;
+            border-radius: 10px;
+            text-align: left;
+
+            float: none;
+            shape-outside: none;
+            position:static;
+
+        }
+        @media(max-width:1024px){
+            .sec1{
+            
+            flex-direction: column;
+            }
+            .sec1-2{
+                align-items: center;
+            }
+
+        }
+        #projects{
+            display: none;
+            width: 300px;
+            padding: 15px;
+            margin-top: 10px;
+            background: #f2f2f2;
+            border: 2px solid #333;
+            border-radius: 10px;
+            text-align: left;
+
+            float: none;
+            shape-outside: none;
+            position:static;
+        }
+        #Contact{
+            display: none;
+            width: 300px;
+            padding: 15px;
+            margin-top: 10px;
+            background: #f2f2f2;
+            border: 2px solid #333;
+            border-radius: 10px;
+            text-align: left;
+
+            float: none;
+            shape-outside: none;
+            position:static;
+        }
+        .img img{
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            object-fit: cover;
+
+        }
+        .sec1{
+            display: flex;
+            height: 40vh;
+            align-items: center;
+            margin: 100px;
+
+        }
+        .sec1-2{
+            margin: 100px;
+        }
+        .sp{
+            color: black;
+            font-weight: 200px;
+            font-size: 20px;
+            padding-bottom: 5px;
+        }
+        .btn1{
+            height: 30px;
+            justify-content: space-around;
+            color:black;
+            border: 2px solid black;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: 400px;
+            
+        }
+        .btn1:hover{
+            background-color: black;
+            color: white;
+        }
+        .btn2:hover{
+            background-color: orange;
+            color: black ;
+
+        }
+        .btn2{
+            height: 30px;
+            justify-content: space-around;
+            color: white;
+            background-color: black;
+            border-radius: 20px;
+            font-size: 15px;
+            gap: 30px;
+            
+        
+        }
+        h1{
+            color: darkorange;
+            font-size: 35px;
+            
+        }
+        .sp1{
+            height: 5px;
+            font-size: 25px;
+            height: 10px;
+            font-weight: 300px;
+            margin-bottom: 20px;
+            
+        }
+        .btn3{
+            cursor: pointer;
+        }
+        .p1{
+            text-align: left;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+        .sp1{
+            margin-bottom: 10px;
+        }
+    </style>
+    
     <nav class="navbar">
         <div class="na">Jitendar Reddy N R</div>
         <div class="menu">
